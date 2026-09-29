@@ -1,5 +1,5 @@
 import pytest
-from main.py import add, hello, add_endpoint
+from app/main.py import add, hello, add_endpoint
 
 def test_add_positive():
   assert add(2, 3) == 5
