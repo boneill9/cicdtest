@@ -8,9 +8,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run tests
-        run: |
-          pytest -q
+      - name: Install dependencies
+        run: pip install -r ./requirements.txt
+      - name: Run unit tests
+        run: pytest -q
 
       - name: Build and push
         env:
